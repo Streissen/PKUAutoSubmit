@@ -179,33 +179,33 @@ def fill_out(driver, campus, reason, destination, track):
     print('出校备案填报完毕！')
 
 
-def fill_in(driver, campus, reason, habitation, district, street):
-    print('开始填报入校备案')
+# def fill_in(driver, campus, reason, habitation, district, street):
+#     print('开始填报入校备案')
 
-    print('选择出校/入校    ', end='')
-    select_in_out(driver, '入校')
-    print('Done')
+#     print('选择出校/入校    ', end='')
+#     select_in_out(driver, '入校')
+#     print('Done')
 
-    print('填写出入校事由    ', end='')
-    write_reason(driver, reason)
-    print('Done')
+#     print('填写出入校事由    ', end='')
+#     write_reason(driver, reason)
+#     print('Done')
 
-    if habitation != '北京':
-        raise Exception('暂不支持京外入校备案，请手动填写')
+#     if habitation != '北京':
+#         raise Exception('暂不支持京外入校备案，请手动填写')
 
-    print('选择居住地所在区    ', end='')
-    select_district(driver, district)
-    print('Done')
+#     print('选择居住地所在区    ', end='')
+#     select_district(driver, district)
+#     print('Done')
 
-    print('填写居住地所在街道    ', end='')
-    write_street(driver, street)
-    print('Done')
+#     print('填写居住地所在街道    ', end='')
+#     write_street(driver, street)
+#     print('Done')
 
-    click_inPeking(driver)
-    click_check(driver)
-    submit(driver)
+#     click_inPeking(driver)
+#     click_check(driver)
+#     submit(driver)
 
-    print('入校备案填报完毕！')
+#     print('入校备案填报完毕！')
 
 
 def run(driver, username, password, campus, reason, destination, track,
@@ -217,8 +217,8 @@ def run(driver, username, password, campus, reason, destination, track,
     fill_out(driver, campus, reason, destination, track)
     print('=================================')
 
-    go_to_application_in(driver)
-    fill_in(driver, campus, reason, habitation, district, street)
+#     go_to_application_in(driver)
+#     fill_in(driver, campus, reason, habitation, district, street)
 
     print('=================================')
     print('可以愉快的玩耍啦！')
