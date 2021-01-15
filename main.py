@@ -55,8 +55,8 @@ def login(driver, username, password, failed=0):
 def go_to_application_out(driver):
     driver.find_element_by_id('all').click()
     WebDriverWait(driver, TIMEOUT).until(
-        EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
-    driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
+        EC.visibility_of_element_located((By.ID, 'stuCampusExEnReq')))
+    driver.find_element_by_id('stuCampusExEnReq').click()
     time.sleep(TIMESLP)
     driver.switch_to.window(driver.window_handles[-1])
     WebDriverWait(driver, TIMEOUT).until(
@@ -68,23 +68,23 @@ def go_to_application_out(driver):
         EC.visibility_of_element_located((By.CLASS_NAME, 'el-input__inner')))
 
 
-def go_to_application_in(driver):
-    driver.get('https://portal.pku.edu.cn/portal2017/#/bizCenter')
-    WebDriverWait(driver, TIMEOUT).until(
-        EC.visibility_of_element_located((By.ID, 'all')))
-    driver.find_element_by_id('all').click()
-    WebDriverWait(driver, TIMEOUT).until(
-        EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
-    driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
-    time.sleep(TIMESLP)
-    driver.switch_to.window(driver.window_handles[-1])
-    WebDriverWait(driver, TIMEOUT).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
-    time.sleep(TIMESLP)
-    driver.find_element_by_class_name('el-card__body').click()
-    time.sleep(TIMESLP)
-    WebDriverWait(driver, TIMEOUT).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
+# def go_to_application_in(driver):
+#     driver.get('https://portal.pku.edu.cn/portal2017/#/bizCenter')
+#     WebDriverWait(driver, TIMEOUT).until(
+#         EC.visibility_of_element_located((By.ID, 'all')))
+#     driver.find_element_by_id('all').click()
+#     WebDriverWait(driver, TIMEOUT).until(
+#         EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
+#     driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
+#     time.sleep(TIMESLP)
+#     driver.switch_to.window(driver.window_handles[-1])
+#     WebDriverWait(driver, TIMEOUT).until(
+#         EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
+#     time.sleep(TIMESLP)
+#     driver.find_element_by_class_name('el-card__body').click()
+#     time.sleep(TIMESLP)
+#     WebDriverWait(driver, TIMEOUT).until(
+#         EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
 
 
 def select_in_out(driver, way):
