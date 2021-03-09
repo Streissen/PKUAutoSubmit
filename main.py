@@ -217,8 +217,8 @@ def run(driver, username, password, campus, reason, destination, track,
     fill_out(driver, campus, reason, destination, track)
     print('=================================')
 
-#     go_to_application_in(driver)
-#     fill_in(driver, campus, reason, habitation, district, street)
+    go_to_application_in(driver)
+    fill_in(driver, campus, reason, habitation, district, street)
 
     print('=================================')
     print('可以愉快的玩耍啦！')
